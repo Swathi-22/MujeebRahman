@@ -79,22 +79,27 @@
 <div class="row g-5">
 <div class="col-lg-6 contact-form wow slideInUp" data-wow-delay="0.3s">
 <div id="alertMessage"></div>
-<form id="contactForm" novalidate="novalidate">
+<form id="contactForm" novalidate="novalidate" method="POST">
+    {% csrf_token %}
 <div class="row gx-3">
 <div class="col-md-6 control-group">
-<input type="text" class="form-control border-0 bg-light px-4" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" style="height: 55px;">
+<!-- <input type="text" class="form-control border-0 bg-light px-4" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" style="height: 55px;"> -->
+{{forms.name}}
 <p class="help-block text-danger"></p>
 </div>
 <div class="col-md-6 control-group">
-<input type="email" class="form-control border-0 bg-light px-4" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" style="height: 55px;">
+<!-- <input type="email" class="form-control border-0 bg-light px-4" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" style="height: 55px;"> -->
+{{forms.email}}
 <p class="help-block text-danger"></p>
 </div>
 <div class="col-12 control-group">
-<input type="text" class="form-control border-0 bg-light px-4" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" style="height: 55px;">
+<!-- <input type="text" class="form-control border-0 bg-light px-4" id="phone" placeholder="Your Phone" required="required" data-validation-required-message="Please enter a subject" style="height: 55px;"> -->
+{{forms.phone}}
 <p class="help-block text-danger"></p>
 </div>
 <div class="col-12 control-group">
-<textarea class="form-control border-0 bg-light px-4 py-3" rows="4" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+<!-- <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea> -->
+{{forms.message}}
 <p class="help-block text-danger"></p>
 </div>
 <div class="col-12">
@@ -114,6 +119,6 @@
 </div>
 
 
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 {% endblock %}

@@ -46,6 +46,19 @@
                 <h1 class="mb-0">A showcase of awesome moments captured</h1>
             </div>
             <div class="row g-5">
+                {% for galleries in gallery %}
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="{{galleries.image.crop.340x340}}" alt="">
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+                {% endfor %}
+
+                {% comment %}
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light rounded overflow-hidden">
                         <div class="team-img position-relative overflow-hidden">
@@ -91,15 +104,7 @@
                        
                     </div>
                 </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{% static 'web/img/team-1.jpg' %}" alt="">
-                            
-                        </div>
-                       
-                    </div>
-                </div>
+                {% endcomment %}
             </div>
         </div>
     </div>

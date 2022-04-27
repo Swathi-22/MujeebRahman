@@ -11,9 +11,11 @@
             <div class="row justify-content-start">
                 <div class="col-lg-8 pt-lg-5 mt-lg-5 text-center text-lg-start">
                     <h5 class="text-white text-uppercase mb-3 animated slideInDown">MUJEEB RAHMAN K</h5>
-                    <h1 class="display-1 text-white mb-md-4 animated zoomIn text-size">SUCCESSFUL AND INSPIRING ENTREPRENEUR OF KERALA</h1>
+                    <h1 class="display-1 text-white mb-md-4 animated zoomIn text-size">SUCCESSFUL AND INSPIRING
+                        ENTREPRENEUR OF KERALA</h1>
                     <!-- <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a> -->
-                    <a href="{% url 'web:contact' %}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                    <a href="{% url 'web:contact' %}"
+                        class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -48,7 +50,9 @@
                     <h5 class="fw-bold text-primary text-uppercase">Profile</h5>
                     <h1 class="mb-0">Founder, Chairman & Managing Director of Royal Drive</h1>
                 </div>
-                <p class="mb-4">Mujeeb Rahman is the founder & CEO of Royal Drive, the first showroom for pre-owned luxury cars.  Dedication and passion brought success to the business and remains a strong inspiration for aspiring entrepreneurs.</p>
+                <p class="mb-4">Mujeeb Rahman is the founder & CEO of Royal Drive, the first showroom for pre-owned
+                    luxury cars. Dedication and passion brought success to the business and remains a strong inspiration
+                    for aspiring entrepreneurs.</p>
                 <div class="border rounded p-4 wow fadeInUp" data-wow-delay="0.6s">
                     <nav>
                         <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
@@ -66,7 +70,9 @@
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-story" role="tabpanel"
                             aria-labelledby="nav-story-tab">
-                            <p>The success tale of Mujeeb Rahman is a stirring story for every dreamer. According to this successful businessman from Kerala, the keys to a successful business for this passionate entrepreneur are,</p>
+                            <p>The success tale of Mujeeb Rahman is a stirring story for every dreamer. According to
+                                this successful businessman from Kerala, the keys to a successful business for this
+                                passionate entrepreneur are,</p>
                             <div class="row g-3">
                                 <div class="col-sm-6">
                                     <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Quality Employees</h5>
@@ -74,7 +80,8 @@
                                     </h5>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Abided to the Nation's Law</h5>
+                                    <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Abided to the Nation's
+                                        Law</h5>
                                     <h5 class="mb-0"><i class="fa fa-check text-primary me-3"></i>Transparency</h5>
                                 </div>
                             </div>
@@ -95,7 +102,8 @@
                             </div>
                         </div> -->
                         <div class="tab-pane fade" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab">
-                            <p>His vision is to achieve global growth in the business and to become the first choice for customers when it comes to pre-owned luxury cars.</p>
+                            <p>His vision is to achieve global growth in the business and to become the first choice for
+                                customers when it comes to pre-owned luxury cars.</p>
                             <div class="row g-3">
                                 <div class="col-sm-6">
                                     <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Global growth</h5>
@@ -130,24 +138,30 @@
             <h1 class="mb-0">Get updated with the latest news and events </h1>
         </div>
         <div class="row g-5">
-            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+
+            {% for update in updates %}
+            <div class="col-md-4 wow slideInUp" data-wow-delay="0.1s">
                 <div class="blog-item bg-light rounded overflow-hidden">
                     <div class="blog-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{% static 'web/img/blog-1.jpg' %}" alt="">
-                        <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                            href="#">Web Design</a>
+                        <img class="img-fluid w-100" src="{{update.image.crop.340x238}}" alt="">
+                        <!-- <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="#">Web Design</a> -->
                     </div>
                     <div class="p-4">
                         <div class="d-flex mb-3">
-                            <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                            <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                            <!-- <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small> -->
+                            <small><i class="far fa-calendar-alt text-primary me-2"></i>{{update.date|date:"d"}}
+                                {{update.date|date:"M"}}, {{update.date|date:"Y"}}</small>
                         </div>
-                        <h4 class="mb-3">How to build a website</h4>
-                        <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                        <a class="text-uppercase" href="#">Read More <i class="bi bi-arrow-right"></i></a>
+                        <h4 class="mb-3">{{update.title}}</h4>
+                        <p>{{update.summary}}</p>
+                        <a class="text-uppercase" href="{% url 'web:updateDetails' update.slug  %}">Read More <i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
+            {% endfor %}
+
+            {% comment %}
             <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
                 <div class="blog-item bg-light rounded overflow-hidden">
                     <div class="blog-img position-relative overflow-hidden">
@@ -184,6 +198,7 @@
                     </div>
                 </div>
             </div>
+            {% endcomment %}
         </div>
     </div>
 </div>

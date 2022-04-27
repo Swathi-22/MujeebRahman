@@ -1,11 +1,19 @@
 from multiprocessing import context
-from django.shortcuts import render
+import re
+from django.shortcuts import  render,get_object_or_404
+from .forms import ContactForm
+from .models import Contact,Gallery,Update,Companies
+from django.http import JsonResponse
 
 # Create your views here.
 
 def index(request):
+    updates=Update.objects.all()[:3]
+    company=Companies.objects.all()
     context = {
         "is_index" : True,
+        'updates':updates,
+        'company':company
     }
     return render(request,'web/index.html',context)
 
@@ -46,28 +54,46 @@ def services(request):
 
 
 def updates(request):
+    updates=Update.objects.all()
     context = {
         "is_updates" : True,
+        'updates':updates
     }
     return render(request,'web/updates.html',context)
 
 
-def updateDetails(request):
+def updateDetails(request,slug):
+    update = get_object_or_404(Update,slug=slug)
+    updates=Update.objects.all()
     context = {
-        
+        'update':update,
+        'updates':updates
     }
     return render(request,'web/update-details.html',context)
 
 
 def gallery(request):
+    gallery=Gallery.objects.all()
     context = {
         "is_gallery" : True,
+        'gallery':gallery
     }
     return render(request,'web/gallery.html',context)
 
 
 def contact(request):
+    forms=ContactForm(request.POST or None)
     context = {
         "is_contact" : True,
+        'forms':forms
     }
     return render(request,'web/contact.html',context)
+
+
+def SaveContactForm(request):
+    forms=ContactForm(request.POST or None)
+    if request.method=='POST':
+        print(request.POST)
+        if forms.is_valid():
+            forms.save()
+    return JsonResponse({'title':'name'})

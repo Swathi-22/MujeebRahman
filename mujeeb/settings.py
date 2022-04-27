@@ -1,29 +1,36 @@
 
 from pathlib import Path
-import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+from decouple import config,Csv
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 
-SECRET_KEY = 'django-insecure-yys0nu-+$5329lvr6iv69i504%2kpf1c@b=_)9w@tg82b8ze8h'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+SECRET_KEY = config('SECRET_KEY')
+
+DEBUG = config('DEBUG', default=True, cast=bool)
+
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'versatileimagefield',
+    'tinymce',
+
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 
     'web',
 ]
@@ -59,8 +66,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mujeeb.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'ENGINE': config('DB_ENGINE'),
+#         'NAME': config('DB_NAME'),
+#         'USER': config('DB_USER'),
+#         'PASSWORD': config('DB_PASSWORD'),
+#         'HOST': config('DB_HOST'),
+#         'PORT': '',
+#     }
+# }
+
 
 DATABASES = {
     'default': {
@@ -70,26 +86,36 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    # },
 ]
 
 
-
+VERSATILEIMAGEFIELD_SETTINGS = {
+   
+    'cache_length': 2592000,
+    'cache_name': 'versatileimagefield_cache',
+    'jpeg_resize_quality': 70,
+    'sized_directory_name': '__sized__',
+    'filtered_directory_name': '__filtered__',
+    'placeholder_directory_name': '__placeholder__',
+    'create_images_on_demand': True,
+    'image_key_post_processor': None,
+    'progressive_jpeg': False
+}
 
 LANGUAGE_CODE = 'en-us'
 

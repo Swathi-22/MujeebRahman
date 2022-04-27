@@ -724,7 +724,7 @@ h6,
     width: 100%;
     height: 46px;
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
 
 .project-carousel .owl-nav .owl-prev,

@@ -17,24 +17,25 @@
                 </div> -->
             </div>
             <div class="nav-item dropdown">
-                <a href="{% url 'web:profile' %}" class="nav-link {% if is_profile %} active {% endif %}">Profile</a>
-                <!-- <div class="dropdown-menu m-0">
-                    <a href="about.html" class="dropdown-item">About 1</a>
-                    <a href="about-2.html" class="dropdown-item">About 2</a>
-                </div> -->
+                <a href="{% url 'web:profile' %}" class="nav-link dropdown-toggle {% if is_profile %} active {% endif %}"  aria-expanded="false">Profile</a>
+                <div class="dropdown-menu m-0">
+                    <a href="{% url 'web:position' %}" class="dropdown-item">Position</a>
+                    <a href="{% url 'web:award' %}" class="dropdown-item">Awards</a>
+                    <a href="{% url 'web:companies' %}" class="dropdown-item">Group Companies</a>
+                </div>
             </div>
-            <div class="nav-item dropdown">
+            <!-- <div class="nav-item dropdown">
                 <a href="{% url 'web:position' %}" class="nav-link {% if is_position %} active {% endif %}">Position</a>
-                <!-- <div class="dropdown-menu m-0">
+                <div class="dropdown-menu m-0">
                     <a href="service-1.html" class="dropdown-item">Service 1</a>
                     <a href="service-2.html" class="dropdown-item">Service 2</a>
                     <a href="service-3.html" class="dropdown-item">Service 3</a>
                     <a href="position.html" class="dropdown-item">Service Detail</a>
-                </div> -->
-            </div>
-            <div class="nav-item dropdown">
+                </div>
+            </div> -->
+            <!-- <div class="nav-item dropdown">
                 <a href="{% url 'web:award' %}" class="nav-link {% if is_award %} active {% endif %} ">Awards</a>
-                <!-- <div class="dropdown-menu m-0">
+                <div class="dropdown-menu m-0">
                     <a href="price-1.html" class="dropdown-item">Price Page 1</a>
                     <a href="price-2.html" class="dropdown-item">Price Page 2</a>
                     <a href="project.html" class="dropdown-item">Project Page</a>
@@ -45,16 +46,16 @@
                     <a href="team.html" class="dropdown-item">Team Page</a>
                     <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                     <a href="404.html" class="dropdown-item">404 Page</a>
-                </div> -->
-            </div>
-            <div class="nav-item dropdown">
+                </div>
+            </div> -->
+            <!-- <div class="nav-item dropdown">
                 <a href="{% url 'web:companies' %}" class="nav-link {% if is_companies %} active {% endif %}">Group Companies</a>
-            </div>
+            </div> -->
             <div class="nav-item dropdown">
                 <a href="{% url 'web:services' %}" class="nav-link {% if is_service %} active {% endif %}">Community Services</a>
             </div>
             <div class="nav-item dropdown">
-                <a href="{% url 'web:updates' %}" class="nav-link {% if is_updates %} active {% endif %}">News & Events</a>
+                <a href="{% url 'web:updates' %}" class="nav-link {% if is_updates %} active {% endif %}">Updates</a>
             </div>
             <div class="nav-item dropdown">
                 <a href="{% url 'web:gallery' %}" class="nav-link  {% if is_gallery %} active {% endif %}">Gallery</a>

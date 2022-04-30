@@ -6,7 +6,7 @@
 <div class="container-fluid position-relative p-0">
     {% include 'web/partials/header.html' %}
 
-    <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+    <div class="container-fluid bg-primary py-5 bg-header">
         <div class="row py-5">
             <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                 <h1 class="display-4 text-white animated zoomIn mb-3">Profile</h1>
@@ -47,7 +47,7 @@
                     <h1 class="mb-0">Ride business with the wheels of passion</h1>
                 </div>
                 <p class="mb-4">Childhood dreams are the true passion that can be made into a successful business. Mujeeb had a true passion for cars and he worked hard to give wings to his dreams. Learning and hard work boosted his career and placed a renowned position among the leading entrepreneurs. Royal Drive was the life-changing business of Mujeeb Rahman that itself produced a higher brand value among the public.</p>
-                <div class="row g-0 mb-3">
+                <!-- <div class="row g-0 mb-3">
                     <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
                         <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Luxury pre-owned cars</h5>
                         <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Buy, sell & exchange</h5>
@@ -56,8 +56,72 @@
                         <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Largest used car showroom</h5>
                         <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>First robotic manager</h5>
                     </div>
+                </div> -->
+                <div class="border rounded p-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <nav>
+                        <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                            <button class="nav-link text-uppercase active" id="nav-story-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-story" type="button" role="tab" aria-controls="nav-story"
+                                aria-selected="true">Story</button>
+                            <!-- <button class="nav-link text-uppercase" id="nav-mission-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-mission" type="button" role="tab" aria-controls="nav-mission"
+                                aria-selected="false">Mission</button> -->
+                            <button class="nav-link text-uppercase" id="nav-vision-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-vision" type="button" role="tab" aria-controls="nav-vision"
+                                aria-selected="false">Vision</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-story" role="tabpanel"
+                            aria-labelledby="nav-story-tab">
+                            <p>The success tale of Mujeeb Rahman is a stirring story for every dreamer. According to
+                                this successful businessman from Kerala, the keys to a successful business for this
+                                passionate entrepreneur are,</p>
+                            <!-- <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <h5 class="mb-3"><i class="fa fa-check text-white me-3"></i>Quality Employees</h5>
+                                    <h5 class="mb-0"><i class="fa fa-check text-white me-3"></i>Financial Support
+                                    </h5>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5 class="mb-3"><i class="fa fa-check text-white me-3"></i>Abided to the Nation's
+                                        Law</h5>
+                                    <h5 class="mb-0"><i class="fa fa-check text-white me-3"></i>Transparency</h5>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- <div class="tab-pane fade" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
+                            <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet
+                                diam et eos labore. Clita erat ipsum et lorem et sit</p>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <h5 class="mb-3"><i class="fa fa-check text-white me-3"></i>Award Winning</h5>
+                                    <h5 class="mb-0"><i class="fa fa-check text-white me-3"></i>Professional Staff
+                                    </h5>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5 class="mb-3"><i class="fa fa-check text-white me-3"></i>24/7 Support</h5>
+                                    <h5 class="mb-0"><i class="fa fa-check text-white me-3"></i>Fair Prices</h5>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="tab-pane fade" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab">
+                            <p>His vision is to achieve global growth in the business and to become the first choice for
+                                customers when it comes to pre-owned luxury cars.</p>
+                            <!-- <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <h5 class="mb-3"><i class="fa fa-check text-white me-3"></i>Global growth</h5>
+                                    <h5 class="mb-0"><i class="fa fa-check text-white me-3"></i>Quality services
+                                    </h5>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5 class="mb-3"><i class="fa fa-check text-white me-3"></i>Customer’s choice</h5>
+                                    <h5 class="mb-0"><i class="fa fa-check text-white me-3"></i>Trusted partner</h5>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
                 </div>
-
 
 
             </div>
@@ -191,6 +255,24 @@
         </div>
     </div>
 
+    <div class="container-fluid py-3 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-2 mb-5">
+            <div class="bg-white">
+                <div class="owl-carousel vendor-carousel">
+                    <img src="{% static 'web/img/vendor-1.jpg' %}" alt="">
+                    <img src="{% static 'web/img/vendor-2.jpg' %}" alt="">
+                    <img src="{% static 'web/img/vendor-3.jpg' %}" alt="">
+                    <img src="{% static 'web/img/vendor-4.jpg' %}" alt="">
+                    <img src="{% static 'web/img/vendor-5.jpg' %}" alt="">
+                    <img src="{% static 'web/img/vendor-6.jpg' %}" alt="">
+                    <img src="{% static 'web/img/vendor-7.jpg' %}" alt="">
+                    <img src="{% static 'web/img/vendor-8.jpg' %}" alt="">
+                    <img src="{% static 'web/img/vendor-9.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
     {% endblock %}

@@ -1,15 +1,17 @@
 {% load static %}
 
-<div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+<div class="container-fluid bg-dark text-light mt-5 wow fadeInUp pt-26" data-wow-delay="0.1s">
     <div class="container">
         <div class="row gx-5">
+            {% comment %}
             <div class="col-lg-4 col-md-6 footer-about">
                 <div
                     class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
                     <a href="#" class="navbar-brand">
                         <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>MR</h1>
                     </a>
-                    <p class="mt-3 mb-4">Prominent entrepreneur of Kerala who proved passion and dedication is the key to a successful business.</p>
+                    <p class="mt-3 mb-4">Prominent entrepreneur of Kerala who proved passion and dedication is the key
+                        to a successful business.</p>
                     <!-- <form action="#">
                         <div class="input-group">
                             <input type="text" class="form-control border-white p-3" placeholder="Your Email">
@@ -56,12 +58,15 @@
                         <div class="link-animated d-flex flex-column justify-content-start">
                             <a class="text-light mb-2" href="{% url 'web:index' %}"><i
                                     class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                            <a class="text-light mb-2" href="{% url 'web:profile' %}"><i class="bi bi-arrow-right text-primary me-2"></i>Profile</a>
-                            <a class="text-light mb-2" href="{% url 'web:services' %}"><i class="bi bi-arrow-right text-primary me-2"></i>
+                            <a class="text-light mb-2" href="{% url 'web:profile' %}"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Profile</a>
+                            <a class="text-light mb-2" href="{% url 'web:services' %}"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>
                                 Services</a>
                             <a class="text-light mb-2" href="{% url 'web:updates' %}"><i
                                     class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                            <a class="text-light" href="{% url 'web:contact' %}"><i class="bi bi-arrow-right text-primary me-2"></i>Contact
+                            <a class="text-light" href="{% url 'web:contact' %}"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Contact
                                 Us</a>
                         </div>
                     </div>
@@ -86,21 +91,84 @@
                         </div>
                     </div> -->
             </div>
+            {% endcomment %}
+            <div class="col-lg-12 col-md-12 col-sm-12 d-lg-block d-sm-none d-md-none d-none text-center">
+               
+                    <a class="text-light py-3 mx-3" href="{% url 'web:index' %}">Home</a>
+                    <a class="text-light py-3 mx-3" href="{% url 'web:profile' %}">Profile</a>
+                    <a class="text-light py-3 mx-3" href="{% url 'web:position' %}">Position</a>
+                    <a class="text-light py-3 mx-3" href="{% url 'web:award' %}">Award</a>
+                    <a class="text-light py-3 mx-3" href="{% url 'web:companies' %}">Group Companies</a>
+                    <a class="text-light py-3 mx-3" href="{% url 'web:services' %}">Community Services</a>
+                    <a class="text-light py-3 mx-3" href="{% url 'web:updates' %}">Updates</a>
+                    <a class="text-light py-3 mx-3" href="{% url 'web:gallery' %}">Gallery</a>
+                    <a class="text-light py-3 mx-3" href="{% url 'web:contact' %}">Contacts</a>
+                
+        
+
+            </div>
+           
+
+            <div class="col-sm-4 col-4 d-lg-none d-sm-block d-md-none d-flex dr">
+                <a class="text-light py-1 mx-3" href="{% url 'web:index' %}">Home</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:profile' %}">Profile</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:position' %}">Position</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:award' %}">Award</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:updates' %}">Updates</a>
+                
+            </div>
+            <div class="col-sm-8 col-8 d-lg-none d-sm-block d-md-none d-flex dr">
+                <a class="text-light py-1 mx-3" href="{% url 'web:companies' %}">Group Companies</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:companies' %}">Group Companies</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:services' %}">Community Services</a>
+                
+                <a class="text-light py-1 mx-3" href="{% url 'web:gallery' %}">Gallery</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:contact' %}">Contacts</a>
+
+            </div>
+
+
+            <div class="col-md-12 col-12 d-lg-none d-sm-none d-md-block d-none dr">
+                <a class="text-light py-1 mx-3" href="{% url 'web:index' %}">Home</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:profile' %}">Profile</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:position' %}">Position</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:award' %}">Award</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:updates' %}">Updates</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:gallery' %}">Gallery</a>
+                
+            </div>
+            <div class="col-md-12 col-12 d-lg-none d-sm-none d-md-block d-none dr">
+                <a class="text-light py-1 mx-3" href="{% url 'web:companies' %}">Group Companies</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:companies' %}">Group Companies</a>
+                <a class="text-light py-1 mx-3" href="{% url 'web:services' %}">Community Services</a>
+                
+                
+                <a class="text-light py-1 mx-3" href="{% url 'web:contact' %}">Contacts</a>
+
+            </div>
         </div>
     </div>
 </div>
 </div>
 
 <div class="container-fluid text-white" style="background: #061429;">
-    <div class="container text-center">
-        <div class="row justify-content-end">
-            <div class="col-lg-8 col-md-6">
-                <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                    <p class="mb-0">&copy; Copyright 2022 by Mujeebrahman.com. All rights reserved. </p>
-                </div>
+    <div class="row">
+   
+        <div class="col-lg-12 col-md-12 social-link text-center">
+            <div class="pt-23">
+                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+            </div>
+        </div>
+
+
+        <div class="col-lg-12 col-md-12 text-center">
+            <div class="copyright  justify-content-center" style="height: 75px;">
+                <p class="mb-0 copyright-mob">&copy; Copyright 2022 by Mujeebrahman.com. All rights reserved. </p>
             </div>
         </div>
     </div>
+   
 </div>
-
-

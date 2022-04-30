@@ -6,7 +6,7 @@
 
 <div class="container-fluid position-relative p-0">
     {% include 'web/partials/header.html' %}
-<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+<div class="container-fluid bg-primary py-5 bg-header">
 <div class="row py-5">
 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
 <h1 class="display-4 text-white animated zoomIn mb-3">Blog Detail</h1>
@@ -36,13 +36,13 @@
 </div>
 
 
-<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+<div class="container-fluid py-4 wow fadeInUp" data-wow-delay="0.1s">
 <div class="container py-5">
 <div class="row g-5">
 <div class="col-lg-12">
 
 <div class="mb-5">
-<img class="img-fluid w-100 rounded mb-5" src="{{update.image.crop.728x350}}" alt="">
+<img class="img-fluid w-100 rounded mb-5" src="{{update.image.crop.600x300}}" alt="">
 <p>{{update.content|safe}}</p>
 
 </div>

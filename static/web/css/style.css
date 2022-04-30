@@ -1,3 +1,6 @@
+body {
+    background-color: #fff;
+}
 :root {
     --primary: #06A3DA;
     --secondary: #34AD54;
@@ -8,7 +11,7 @@
 .spinner {
     width: 40px;
     height: 40px;
-    background: var(--primary);
+    background: #060505;
     margin: 100px auto;
     -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
     animation: sk-rotateplane 1.2s infinite ease-in-out
@@ -75,7 +78,9 @@ h6,
 .fw-medium {
     font-weight: 500 !important
 }
-
+p{
+    text-align: justify;
+}
 .btn {
     font-family: nunito, sans-serif;
     font-weight: 600;
@@ -84,7 +89,7 @@ h6,
 
 .btn-primary,
 .btn-secondary {
-    color: #fff;
+    color: #060505;
     box-shadow: inset 0 0 0 50px transparent
 }
 
@@ -124,7 +129,7 @@ h6,
     position: relative;
     margin-left: 25px;
     padding: 35px 0;
-    color: #fff !important;
+    color: #061429 !important;
     font-size: 18px;
     font-weight: 600;
     outline: none;
@@ -133,16 +138,16 @@ h6,
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
     padding: 20px 0;
-    color: var(--dark) !important
+    color: #060505 !important
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary) !important
+    color: 	#fff !important
 }
 
 .navbar-light .navbar-brand h1 {
-    color: #fff
+    color: #091E3E
 }
 
 .navbar-light .navbar-brand img {
@@ -153,11 +158,27 @@ h6,
 .sticky-top.navbar-light .navbar-brand img {
     max-height: 45px
 }
+.pt-26{
+    padding: 26px;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+}
+.social-link{
+    display: flex;
+    justify-content: center;
+}
+.pt-23{
+    padding-top: 23px;
+}
+
+
 
 @media(max-width:991.98px) {
     .sticky-top.navbar-light {
         position: relative;
-        background: #fff
+        background: #060505
     }
 
     .navbar-light .navbar-collapse {
@@ -193,7 +214,7 @@ h6,
 
     .sticky-top.navbar-light {
         position: fixed;
-        background: #fff
+        background: #06050559
     }
 
     .navbar-light .navbar-nav .nav-link::before {
@@ -203,7 +224,7 @@ h6,
         height: 2px;
         bottom: -1px;
         left: 50%;
-        background: var(--primary);
+        background: #fff;
         transition: .5s
     }
 
@@ -218,7 +239,7 @@ h6,
     }
 
     .sticky-top.navbar-light .navbar-brand h1 {
-        color: var(--primary)
+        color: #060505;
     }
 }
 
@@ -262,7 +283,7 @@ h6,
     height: 5px;
     left: 0;
     bottom: 0;
-    background: var(--primary);
+    background: #000000;
     border-radius: 2px
 }
 
@@ -293,14 +314,14 @@ h6,
     width: 6px;
     height: 5px;
     bottom: 0;
-    background: #fff;
+    background: #060505;
     -webkit-animation: section-title-run 5s infinite linear;
     animation: section-title-run 5s infinite linear
 }
 
 .section-title-2::after {
     bottom: -2px;
-    background: var(--primary)
+    
 }
 
 .section-title-1.section-title-sm::after,
@@ -391,7 +412,7 @@ h6,
     top: 2px;
     left: 50%;
     margin-left: -7px;
-    background: var(--primary);
+    background: #091E3E;
     border-radius: 2px;
     transform: rotate(45deg);
     z-index: 1
@@ -498,7 +519,7 @@ h6,
 }
 
 .service3-item:hover * {
-    color: #fff !important
+    color: #060505 !important
 }
 
 .service3-item .service-icon {
@@ -514,7 +535,7 @@ h6,
 }
 
 .service3-item:hover .service-icon {
-    background: #fff !important
+    background: #060505 !important
 }
 
 .service3-item:hover .service-icon i {
@@ -563,7 +584,7 @@ h6,
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item {
-    background: #fff !important;
+    background: #060505 !important;
     box-shadow: 0 0 30px #ddd
 }
 
@@ -641,7 +662,7 @@ h6,
 
 #portfolio-flters .btn:hover,
 #portfolio-flters .btn.active {
-    color: #fff !important
+    color: #060505 !important
 }
 
 .portfolio-item {
@@ -666,7 +687,7 @@ h6,
     right: 30px;
     left: 30px;
     bottom: -60px;
-    background: #fff;
+    background: #060505;
     box-shadow: 0 0 30px rgba(0, 0, 0, .1);
     transition: .5s;
     z-index: 3
@@ -736,7 +757,7 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #060505;
     background: var(--primary);
     border-radius: 2px;
     font-size: 22px;
@@ -789,6 +810,15 @@ h6,
     .process-item .position-relative::after {
         display: none
     }
+    .copyright{
+        display: block;
+        text-align: center;
+    }
+    .copyright-mob{
+        font-size: 12px;
+        text-align: center !important;
+        padding-top: 29px;
+    }
 }
 
 .accordion-custom .accordion-item {
@@ -802,7 +832,7 @@ h6,
 }
 
 .accordion-custom .accordion-button:not(.collapsed) {
-    color: #fff;
+    color: #060505;
     background: var(--primary);
     box-shadow: none
 }
@@ -868,6 +898,10 @@ h6,
     .footer-about {
         margin-bottom: -75px
     }
+
+    .text-size {
+        font-size: 36px !important;
+    }
 }
 
 .button-example .btn {
@@ -894,9 +928,47 @@ h6,
 .inner-demo-item:hover a {
     background-position: bottom center
 }
-.text-size{
-    font-size: 65px;
+
+.text-size {
+    font-size: 50px;
 }
-.box{
+
+.box {
     height: 100%;
+}
+
+@media(min-width:767.98px) {
+
+    .text-size {
+        font-size: 36px !important;
+    }
+    
+}
+.dr {
+    flex-direction: column;
+}
+.bg-black{
+    background-color: #061429 !important;
+}
+.bg-grey{
+    background-color: 	#cccc !important;
+}
+.text-black{
+    color: #000000;
+}
+.company-image{
+    width: 68%;
+}
+.company-name{
+    display: flex;
+    align-items: center;
+}
+.bg-darkblue{
+    background-color: #091E3E;
+}
+.text-blue{
+    color: #061429;
+}
+.update-h4{
+    color: #fff;
 }
